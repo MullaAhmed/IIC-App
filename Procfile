@@ -1,1 +1,1 @@
-web: gunicorn cams.wsgi
+web: gunicorn iic_api.wsgi
