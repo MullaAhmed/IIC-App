@@ -94,8 +94,8 @@ class FinancialServices(models.Model):
     item_value=models.FloatField("Item Value")
     quantity=models.IntegerField("Quantity")
     total_Value=models.FloatField("Total Value")
-    bill_attachment=models.FileField("Bill Attachment",upload_to="Bill Attachment")
-    approval_attachment=models.FileField("Approval Attachment",upload_to="Approval Attachment")
+    bill_attachment=models.FileField("Bill Attachment",upload_to="Bill Attachment",blank=True)
+    approval_attachment=models.FileField("Approval Attachment",upload_to="Approval Attachment",blank=True)
     other_remarks=models.TextField("Remarks")
 
 
@@ -153,7 +153,7 @@ class IPR_Services(models.Model):
     email=models.EmailField("Email")
     type_of_IPR=models.CharField("Type of IPR",max_length=200)
     proposed_title=models.CharField("Proposed Title",max_length=200)
-    IPR_document=models.FileField("IPR Document",upload_to="IPR Document")
+    IPR_document=models.FileField("IPR Document",upload_to="IPR Document",blank=True)
     other_remarks=models.TextField("Remarks")   
 
     def __str__(self):
