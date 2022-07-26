@@ -74,12 +74,12 @@ class MessAndAccommodation(models.Model):
     
     expected_duration_accommodation=models.IntegerField("Expected Duration of Accommodation (In Months)")
     number_of_people_accommodation=models.IntegerField("Number of people")
-    names_of_people_accommodation=models.JSONField("Names Of People")
+    names_of_people_accommodation=models.CharField("Names Of People")
     other_remarks_accommodation=models.TextField("Remarks")
 
     expected_duration_mess=models.IntegerField("Expected Duration of Accommodation (In Months)")
     number_of_people_mess=models.IntegerField("Number of people")
-    names_of_people_mess=models.JSONField("Names Of People")
+    names_of_people_mess=models.CharField("Names Of People")
     other_remarks_mess=models.TextField("Remarks")    
 
     def __str__(self):
@@ -124,7 +124,7 @@ class LabServices(models.Model):
     test=models.CharField("Test",max_length=200)
     duration=models.CharField("Duration",max_length=200)
     number_of_people=models.IntegerField("Number of people")
-    names_of_people=models.JSONField("Names Of People")
+    names_of_people=models.CharField("Names Of People")
     other_remarks=models.TextField("Remarks")   
 
     def __str__(self):
@@ -137,11 +137,11 @@ class ProcurementService(models.Model):
     detailed_specification=models.TextField("Detailed Specification")
     expected_unit_price=models.FloatField("Expected Unit Price")
     required_quantity=models.IntegerField("Required Quantity")
-    supplier_1=models.JSONField("Supplier 1",max_length=2000)
-    supplier_2=models.JSONField("Supplier 2",max_length=2000,blank=True)
-    supplier_3=models.JSONField("Supplier 3",max_length=2000,blank=True)
-    supplier_4=models.JSONField("Supplier 4",max_length=2000,blank=True)
-    supplier_5=models.JSONField("Supplier 5",max_length=2000,blank=True)
+    supplier_1=models.CharField("Supplier 1",max_length=2000)
+    supplier_2=models.CharField("Supplier 2",max_length=2000,blank=True)
+    supplier_3=models.CharField("Supplier 3",max_length=2000,blank=True)
+    supplier_4=models.CharField("Supplier 4",max_length=2000,blank=True)
+    supplier_5=models.CharField("Supplier 5",max_length=2000,blank=True)
     other_remarks=models.TextField("Remarks")   
 
     def __str__(self):
