@@ -74,12 +74,12 @@ class MessAndAccommodation(models.Model):
     
     expected_duration_accommodation=models.IntegerField("Expected Duration of Accommodation (In Months)")
     number_of_people_accommodation=models.IntegerField("Number of people")
-    names_of_people_accommodation=models.CharField("Names Of People")
+    names_of_people_accommodation=models.CharField("Names Of People",max_length=2000)
     other_remarks_accommodation=models.TextField("Remarks")
 
     expected_duration_mess=models.IntegerField("Expected Duration of Accommodation (In Months)")
     number_of_people_mess=models.IntegerField("Number of people")
-    names_of_people_mess=models.CharField("Names Of People")
+    names_of_people_mess=models.CharField("Names Of People",max_length=2000)
     other_remarks_mess=models.TextField("Remarks")    
 
     def __str__(self):
@@ -124,7 +124,7 @@ class LabServices(models.Model):
     test=models.CharField("Test",max_length=200)
     duration=models.CharField("Duration",max_length=200)
     number_of_people=models.IntegerField("Number of people")
-    names_of_people=models.CharField("Names Of People")
+    names_of_people=models.CharField("Names Of People",max_length=2000)
     other_remarks=models.TextField("Remarks")   
 
     def __str__(self):
